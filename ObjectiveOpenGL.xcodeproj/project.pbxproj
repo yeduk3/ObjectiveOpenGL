@@ -6,25 +6,64 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		556F4A4E2D880F49003D35E6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F4A4D2D880F49003D35E6 /* OpenGL.framework */; };
+		556F4A502D880F58003D35E6 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F4A4F2D880F58003D35E6 /* libglfw.3.4.dylib */; };
+		556F4A512D880F58003D35E6 /* libglfw.3.4.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 556F4A4F2D880F58003D35E6 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		556F4A542D880F68003D35E6 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 556F4A532D880F68003D35E6 /* libGLEW.2.2.0.dylib */; };
+		556F4A552D880F68003D35E6 /* libGLEW.2.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 556F4A532D880F68003D35E6 /* libGLEW.2.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		556F4A402D880F31003D35E6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		556F4A522D880F58003D35E6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				556F4A512D880F58003D35E6 /* libglfw.3.4.dylib in Embed Libraries */,
+				556F4A552D880F68003D35E6 /* libGLEW.2.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		556F4A422D880F31003D35E6 /* ObjectiveOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
+		556F4A4D2D880F49003D35E6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		556F4A4F2D880F58003D35E6 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = ../../../../../../opt/homebrew/Cellar/glfw/3.4/lib/libglfw.3.4.dylib; sourceTree = "<group>"; };
+		556F4A532D880F68003D35E6 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		556F4ABF2D896EBF003D35E6 /* Exceptions for "ObjectiveOpenGL" folder in "Copy Files" phase from "ObjectiveOpenGL" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 556F4A402D880F31003D35E6 /* CopyFiles */;
+			membershipExceptions = (
+				ftest.frag,
+				ftest.vert,
+				test.frag,
+				test.vert,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		556F4A442D880F31003D35E6 /* ObjectiveOpenGL */ = {
+		556F4A8F2D8812B3003D35E6 /* ObjectiveOpenGL */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				556F4ABF2D896EBF003D35E6 /* Exceptions for "ObjectiveOpenGL" folder in "Copy Files" phase from "ObjectiveOpenGL" target */,
+			);
 			path = ObjectiveOpenGL;
 			sourceTree = "<group>";
 		};
@@ -35,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556F4A4E2D880F49003D35E6 /* OpenGL.framework in Frameworks */,
+				556F4A542D880F68003D35E6 /* libGLEW.2.2.0.dylib in Frameworks */,
+				556F4A502D880F58003D35E6 /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +86,8 @@
 		556F4A392D880F31003D35E6 = {
 			isa = PBXGroup;
 			children = (
-				556F4A442D880F31003D35E6 /* ObjectiveOpenGL */,
+				556F4A8F2D8812B3003D35E6 /* ObjectiveOpenGL */,
+				556F4A4C2D880F49003D35E6 /* Frameworks */,
 				556F4A432D880F31003D35E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +100,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		556F4A4C2D880F49003D35E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				556F4A532D880F68003D35E6 /* libGLEW.2.2.0.dylib */,
+				556F4A4F2D880F58003D35E6 /* libglfw.3.4.dylib */,
+				556F4A4D2D880F49003D35E6 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -67,13 +120,14 @@
 				556F4A3E2D880F31003D35E6 /* Sources */,
 				556F4A3F2D880F31003D35E6 /* Frameworks */,
 				556F4A402D880F31003D35E6 /* CopyFiles */,
+				556F4A522D880F58003D35E6 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				556F4A442D880F31003D35E6 /* ObjectiveOpenGL */,
+				556F4A8F2D8812B3003D35E6 /* ObjectiveOpenGL */,
 			);
 			name = ObjectiveOpenGL;
 			packageProductDependencies = (
@@ -247,6 +301,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 488U7L9D53;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -257,6 +317,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 488U7L9D53;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = /opt/homebrew/include/;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glfw/3.4/lib,
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
